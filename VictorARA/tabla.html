@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table class="tabla-ciber" id="tablaCiberseguridad">
+        <thead>
+            <tr>
+                <th>Ataque</th>
+                <th>Descripcion</th>
+                <th>Impacto</th>
+                <th>Ejemplo</th>
+                <th>Imagen</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        //El JSON (JavaScript, Object Notation) con la información sobre los ataques de ciberseguridad
+        const ataques = [ 
+            {
+            "ataque":"Phishing",
+            "descripcion": "Engaña al usuario para robar las credenciales mediante correos falsos.",
+            "impacto":"Roba de identidad, pérdida de datos.",
+            "ejemplo":"Correo falso de un banco solicitando datos",
+            "imagen":"https://tse4.mm.bing.net/th/id/OIP.N-ksTyVihck6oZCYxCLSmwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3"
+
+            },
+  {
+    "ataque": "Malware",
+    "impacto": "Pérdida de datos, control del sistema, daño a la infraestructura",
+    "descripcion": "Software malicioso diseñado para dañar, explotar o deshabilitar sistemas, redes o dispositivos.",
+    "ejemplo": "Un troyano que se instala al abrir un archivo adjunto y da acceso remoto al atacante.",
+    "imagen": "imagen de un virus informático atacando una computadora"
+  },
+  {
+    "ataque": "Ransomware",
+    "impacto": "Secuestro de datos con solicitud de rescate económico",
+    "descripcion": "Tipo de malware que cifra los archivos del sistema y exige un pago para liberarlos.",
+    "ejemplo": "El ataque de WannaCry en 2017 que afectó a hospitales y empresas en todo el mundo.",
+    "imagen": "pantalla de rescate de ransomware con mensaje de pago"
+  },
+  {
+    "ataque": "Denegación de servicio (DoS)",
+    "impacto": "Interrupción de servicios o aplicaciones web",
+    "descripcion": "Ataques que sobrecargan un sistema para que deje de funcionar correctamente.",
+    "ejemplo": "Un sitio web bancario se vuelve inaccesible tras recibir millones de solicitudes simultáneas.",
+    "imagen": "servidor colapsado por múltiples conexiones"
+  },
+  {
+    "ataque": "Ataque de denegación distribuida de servicio (DDoS)",
+    "impacto": "Caída de servicios a gran escala",
+    "descripcion": "Ataque DoS proveniente de múltiples dispositivos comprometidos (botnet).",
+    "ejemplo": "El ataque DDoS a Dyn en 2016 que afectó a Twitter, Netflix y otras plataformas.",
+    "imagen": "mapa de red con múltiples fuentes atacando un objetivo"
+  },
+  {
+    "ataque": "Inyección SQL",
+    "impacto": "Acceso no autorizado a bases de datos",
+    "descripcion": "Consiste en insertar código malicioso SQL en formularios de entrada para manipular bases de datos.",
+    "ejemplo": "Un atacante accede a contraseñas insertando una sentencia SQL en un campo de login.",
+    "imagen": "formulario web con código SQL malicioso"
+  },
+  {
+    "ataque": "Ataques de fuerza bruta",
+    "impacto": "Compromiso de cuentas por adivinación de contraseñas",
+    "descripcion": "Intento sistemático de adivinar contraseñas mediante prueba y error.",
+    "ejemplo": "Usar un script automatizado para intentar miles de combinaciones en una cuenta de correo.",
+    "imagen": "pantalla con múltiples intentos de inicio de sesión"
+  },
+  {
+    "ataque": "Ataque Man-in-the-Middle (MitM)",
+    "impacto": "Intercepción de comunicaciones privadas",
+    "descripcion": "El atacante se interpone entre dos partes para espiar o modificar su comunicación.",
+    "ejemplo": "Capturar credenciales de acceso interceptando la conexión Wi-Fi pública.",
+    "imagen": "hombre entre dos computadoras con cables interceptados"
+  },
+  {
+    "ataque": "Exploits de día cero (Zero-Day)",
+    "impacto": "Compromiso total del sistema sin previo aviso",
+    "descripcion": "Ataques que aprovechan vulnerabilidades no conocidas por el proveedor.",
+    "ejemplo": "Un malware que explota una vulnerabilidad de Windows antes de que Microsoft lance un parche.",
+    "imagen": "explosión sobre un sistema con un contador en cero"
+  },
+  {
+    "ataque": "Keylogging",
+    "impacto": "Robo de credenciales o información confidencial",
+    "descripcion": "Software o hardware que registra las pulsaciones del teclado sin que el usuario lo note.",
+    "ejemplo": "Un keylogger que captura las contraseñas cuando se escriben en el navegador.",
+    "imagen": "teclado con una lupa mostrando texto capturado"
+  },
+  {
+    "ataque": "Cross-Site Scripting (XSS)",
+    "impacto": "Ejecución de scripts maliciosos en el navegador del usuario",
+    "descripcion": "Inserción de scripts en páginas web que se ejecutan en el navegador de otras personas.",
+    "ejemplo": "Un atacante inyecta JavaScript en un foro para robar cookies de sesión.",
+    "imagen": "navegador web ejecutando código malicioso"
+  },
+  {
+    "ataque": "Ingeniería social (excepto phishing)",
+    "impacto": "Engaño a usuarios para obtener acceso o información",
+    "descripcion": "Manipulación psicológica para que los usuarios revelen información o realicen acciones inseguras.",
+    "ejemplo": "Un atacante se hace pasar por técnico para obtener acceso físico a un servidor.",
+    "imagen": "persona hablando con otra mientras roba información en secreto"
+  }
+];
+          const cuerpoTabla = document.querySelector("#tablaCiberseguridad tbody");
+          ataques.forEach(ataque=>{
+
+          
+        
+          const fila=document.createElement("tr");
+
+          fila.inneHTML=`
+          <td>${ataque.ataque}</td>
+          <td>${ataque.descripcion}</td>
+          <td>${ataque.impacto}</td>
+          <td>${ataque.ejemplo}</td>
+          <td><img src="${ataque.imagen}"alt="${ataque.ataque}></td>
+          `;
+          cuerpoTabla.appendChild(fila);
+    cuerpoTabla.appendChild(fila);
+})
+    </script>
+</body>
+</html>
