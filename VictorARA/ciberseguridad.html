@@ -1,124 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
-    <script src="stylesheet" href="https://maxcdn.bootstrap.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    <title>Victor Adrian Rangel Armendarez</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unidad 1 - Ciberseguridad</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+  <style>
+    body {
+      background-color: #548fc0;
+      color: white;
+      padding: 20px;
+    }
+
+    table {
+      background: white;
+      color: black;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    h1, h2 {
+      color: white;
+    }
+  </style>
 </head>
 <body>
-    <style>
-        body{
-            background-color: rgb(84, 143, 192);
-            align-items: center;
-            justify-content: center;
-            
-        }
 
-        h1{
-            font-family: 'Times New Roman', Times, serif;
-            color: azure;
-        }
+  <!-- Navegación -->
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">Inicio</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Unidades <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="ciberseguridad.html">Unidad 1 - conceptos</a></li>
+            <li><a href="tabla.html">Unidad 2 - Ataques</a></li>
+            <li><a href="#">Unidad 3 - Protección</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-        h2{
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            color: darkslategray;
-        }
-    </style>
+  <div class="container">
+    <h1>Ciberseguridad</h1>
+    <h2>Tipos de malware</h2>
 
-     <h1>Ciberseguridad</h1>
-     <h2>Tipos de malware</h2>
-
-     <table>
+    <table class="table table-bordered table-striped">
+      <thead>
         <tr>
-            <th>Tipo de malware</th>
-            <th>Función</th>
-            <th>Impacto</th>
+          <th>Tipo de Malware</th>
+          <th>Función</th>
+          <th>Impacto</th>
         </tr>
-        <tr>
-            <td>Virus</td>
-            <td>Self replicate, infect files</td>
-            <td>Daño de datos al igual que de sistemas</td>
-        </tr>
-        <tr>
-            <td>Gusanos</td>
-            <td>Se propaga a travez de las redes</td>
-            <td>Interrupcion de la red, agotamiento de recursos</td>
-        </tr>
-        <tr>
-            <td>Caballo de troya</td>
-            <td>Se disfraza de software legal</td>
-            <td>Robo de datos, control del sistema</td>
-        </tr>
-        <tr>
-            <td>Ransomware</td>
-            <td>Se disfraza de software legitimo</td>
-            <td>Robo de datos, control del sistema</td>
-        </tr>
-        <tr>
-            <td>Software espía</td>
-            <td>Supervisa en secreto la informacion del usuario</td>
-            <td>Violacion de privacidad, robo de datos</td>
-        </tr>
-        <tr>
-            <td>Software Publicitario</td>
-            <td>Muestra anuncios no deseados</td>
-            <td>Molesta, degradacion del rendimento</td>
-        </tr>
-        <tr>
-            <td>Rootkit</td>
-            <td>Ocultar software malicioso</td>
-            <td>Acceso no autorizado, amenazas persistentes</td>
-        </tr>
-        <tr>
-            <td>Keylogger</td>
-            <td>Registra las pulsaciones de teclas</td>
-            <td>Robo de credenciales, filtracion de datos</td>
-        </tr>
-        <tr>
-            <td>Fileless malware<br> malware sin archivos</td>
-            <td>Corre de la memoria</td>
-            <td>Ataque sigiloso y dificil de detectar</td>
-        </tr>
-        <tr>
-            <td>Cryptojacker</td>
-            <td>Minas de criptomonedas</td>
-            <td>problemas de rendimiento, secuestro de recursos</td>
-        </tr>
-        <tr>
-            <td>Red de boots (Botnet)</td>
-            <td>Crear una red de dispositivos infectados</td>
-            <td>Ataque DDos, distribucion de spam</td>
-        </tr><tr>
-            <td>Bomba Logica (logic bomb)</td>
-            <td>Ejecuta codigo en el disparador</td>
-            <td>Destruccion de datos, danos al sistema</td>
-        </tr>
-        <tr>
-            <td>Wiper (limpiabrisas)</td>
-            <td>Destruye datos, daños al sistema</td>
-            <td>Perdida irreversible de datos</td>
-        </tr>
-        <tr>
-            <td>Scareware</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-     </table>
-
+      </thead>
+      <tbody>
+        <tr><td>Virus</td><td>Se replica e infecta archivos</td><td>Daño de datos y sistemas</td></tr>
+        <tr><td>Gusanos</td><td>Se propaga por redes</td><td>Interrupción de red</td></tr>
+        <tr><td>Trojan</td><td>Se disfraza de software legítimo</td><td>Control remoto del sistema</td></tr>
+        <tr><td>Ransomware</td><td>Cifra datos y exige rescate</td><td>Secuestro de información</td></tr>
+        <tr><td>Spyware</td><td>Espía la actividad del usuario</td><td>Robo de datos</td></tr>
+        <tr><td>Adware</td><td>Muestra anuncios no deseados</td><td>Molestias y bajo rendimiento</td></tr>
+        <tr><td>Rootkit</td><td>Oculta software malicioso</td><td>Acceso oculto al sistema</td></tr>
+        <tr><td>Keylogger</td><td>Registra pulsaciones</td><td>Robo de contraseñas</td></tr>
+        <tr><td>Fileless malware</td><td>Corre en la memoria RAM</td><td>Difícil de detectar</td></tr>
+        <tr><td>Cryptojacker</td><td>Minado de criptomonedas</td><td>Alto consumo de recursos</td></tr>
+        <tr><td>Botnet</td><td>Red de dispositivos infectados</td><td>Ataques DDoS</td></tr>
+        <tr><td>Logic Bomb</td><td>Se activa en condiciones específicas</td><td>Destrucción de datos</td></tr>
+        <tr><td>Wiper</td><td>Elimina información del sistema</td><td>Pérdida total de datos</td></tr>
+        <tr><td>Scareware</td><td>Simula alertas falsas</td><td>Engaña al usuario para comprar software</td></tr>
+      </tbody>
+    </table>
+  </div>
 </body>
 </html>
