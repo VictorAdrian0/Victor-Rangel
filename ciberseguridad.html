@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unidad 1 - Ciberseguridad</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+  <style>
+    body {
+      background-color: #548fc0;
+      color: white;
+      padding: 20px;
+    }
+
+    table {
+      background: white;
+      color: black;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    h1, h2 {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navegación -->
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">Inicio</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Unidades <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="ciberseguridad.html">Unidad 1 - conceptos</a></li>
+            <li><a href="tabla.html">Unidad 2 - Ataques</a></li>
+            <li><a href="#">Unidad 3 - Protección</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Ciberseguridad</h1>
+    <h2>Tipos de malware</h2>
+
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Tipo de Malware</th>
+          <th>Función</th>
+          <th>Impacto</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Virus</td><td>Se replica e infecta archivos</td><td>Daño de datos y sistemas</td></tr>
+        <tr><td>Gusanos</td><td>Se propaga por redes</td><td>Interrupción de red</td></tr>
+        <tr><td>Trojan</td><td>Se disfraza de software legítimo</td><td>Control remoto del sistema</td></tr>
+        <tr><td>Ransomware</td><td>Cifra datos y exige rescate</td><td>Secuestro de información</td></tr>
+        <tr><td>Spyware</td><td>Espía la actividad del usuario</td><td>Robo de datos</td></tr>
+        <tr><td>Adware</td><td>Muestra anuncios no deseados</td><td>Molestias y bajo rendimiento</td></tr>
+        <tr><td>Rootkit</td><td>Oculta software malicioso</td><td>Acceso oculto al sistema</td></tr>
+        <tr><td>Keylogger</td><td>Registra pulsaciones</td><td>Robo de contraseñas</td></tr>
+        <tr><td>Fileless malware</td><td>Corre en la memoria RAM</td><td>Difícil de detectar</td></tr>
+        <tr><td>Cryptojacker</td><td>Minado de criptomonedas</td><td>Alto consumo de recursos</td></tr>
+        <tr><td>Botnet</td><td>Red de dispositivos infectados</td><td>Ataques DDoS</td></tr>
+        <tr><td>Logic Bomb</td><td>Se activa en condiciones específicas</td><td>Destrucción de datos</td></tr>
+        <tr><td>Wiper</td><td>Elimina información del sistema</td><td>Pérdida total de datos</td></tr>
+        <tr><td>Scareware</td><td>Simula alertas falsas</td><td>Engaña al usuario para comprar software</td></tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
